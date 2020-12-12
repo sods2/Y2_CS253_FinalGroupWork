@@ -6,4 +6,6 @@ public interface DBConnection {
 
     void close_connection();
 
+    String listUser(int iMaxNumRows);
+
 }

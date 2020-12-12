@@ -37,7 +37,7 @@ public class Console {
     }
 
     public void getUserData() {
-        new DBManager().listUser(getInput_Integer());
+        Main.dbConnection.listUser(getInput_Integer());
     }
 
 //TODO:
