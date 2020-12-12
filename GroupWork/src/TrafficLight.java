@@ -3,7 +3,7 @@ public class TrafficLight {
     TrafficLight(Console console, String command){
         switch (command){
             case "insert":
-//                console.insert();
+                console.insert();
                 break;
             case "query":
                 console.getUserData();

@@ -5,25 +5,25 @@ public class Console {
 
     private Scanner scanner;
 
+    private int nRows = 0;
+
     public String getInput() {
         System.out.println("Insert input:\n");
         scanner = new Scanner(System.in);
         return scanner.next();
     }
 
-    public int getInput_Integer() {
+    public boolean getInput_Integer() {
         System.out.println("Insert input:\n");
         scanner = new Scanner(System.in);
 
-        int nRows = 0;
-
         try {
-            scanner.nextInt();
+            nRows = scanner.nextInt();
+            return true;
         } catch (InputMismatchException e) {
-            System.out.println("Please insert a valid quantity. Must be a digit\n");
-            getInput_Integer();
+            System.out.println("Please insert a valid quantity. Must be a digit and more then 0\n");
+            return false;
         }
-        return nRows;
     }
 
     public String getInput_Date() {
@@ -37,18 +37,19 @@ public class Console {
     }
 
     public void getUserData() {
-        Main.dbConnection.listUser(getInput_Integer());
+        while (!getInput_Integer());
+        Main.dbConnection.listUser(nRows);
     }
 
-//TODO:
-//
-//    public void insert(){
-//        try{
-//            System.out.println("");
-//        } catch (){
-//            System.out.println(e);
-//        }
-//    }
+    public void insert(){
+        System.out.println("Insert value for name:\n");
+        String name = getInput();
+        System.out.println("Insert value for surname:\n");
+        String surname = getInput();
+        System.out.println("Insert value for dob:\n");
+        String dob = getInput_Date();
+        Main.dbConnection.insert(name, surname, dob);
+    }
 
     public void exit() {
         Main.dbConnection.close_connection();

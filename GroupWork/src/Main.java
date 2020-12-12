@@ -11,7 +11,6 @@ public class Main {
         while (true) {
             //getting the connection to the DB only on the first iteration
             if (times == 0) {
-                new Message().welcome();
                 int try_con = 0;
 
                 try {
@@ -23,6 +22,7 @@ public class Main {
                         }
                     }
 
+
                 } catch (SQLException e) {
                     System.out.println("An error occur while trying to connect to the database");
                     new Message().usage();
@@ -30,6 +30,7 @@ public class Main {
                 }
                 //giving time to the program to write all messages otherwise the exception will be displayed after the insert Input message
                 new Thread().sleep(100);
+                new Message().welcome();
                 times++;
             }
             if (times == 1) {

@@ -6,6 +6,8 @@ public interface DBConnection {
 
     void close_connection();
 
-    String listUser(int iMaxNumRows);
+    void listUser(int iMaxNumRows);
+
+    void insert(String name, String surname, String dob);
 
 }

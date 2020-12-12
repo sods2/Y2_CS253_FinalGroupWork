@@ -23,7 +23,7 @@ public class Message {
     public void usage(){
         System.out.println("java jdbc_ex <username> <password>\n" +
                 "Username and Password needs to be passed as arguments in the run config\n" +
-                "use command 'usage_help' to get more info");
+                "Try re-running the application or use command 'usage_help' to get more info");
     }
 
     public void usage_help(){
