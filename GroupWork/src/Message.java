@@ -1,3 +1,6 @@
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 public class Message {
 
     public void welcome(){
@@ -11,7 +14,7 @@ public class Message {
                 "|                          |\n" +
                 "|  1.  insert              |\n" +
                 "|  2.  query               |\n" +
-                "|  3.  exit                |\n" +
+                "|  4.  exit                |\n" +
                 "|                          |\n" +
                 "+--------------------------+\n" +
                 "\n");

@@ -6,7 +6,7 @@ public class TrafficLight {
 //                console.insert();
                 break;
             case "query":
-//                console.query();
+                console.getUserData();
                 break;
             case "usage_help":
                 new Message().usage_help();
