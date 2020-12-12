@@ -18,7 +18,7 @@ public class Main {
                     while (!dbConnection.connect(args)) {
                         try_con++;
                         if (try_con > 2) {
-                            return;
+                            break;
                         }
                     }
 
