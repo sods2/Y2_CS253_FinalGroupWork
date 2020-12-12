@@ -1,5 +1,11 @@
 public class TrafficLight {
 
+    /**
+     * We are using this class to manage all the available commands on the application
+     *
+     * @param console Console obj we will need to get the console methods
+     * @param command the command that the user inputted into the app
+     */
     TrafficLight(Console console, String command){
         switch (command){
             case "insert":

@@ -33,6 +33,7 @@ public class Main {
                 new Message().welcome();
                 times++;
             }
+            //this will run every time that the while runs
             if (times == 1) {
                 app.run();
             }
